@@ -8,7 +8,6 @@ console.log(process.env.HOST, process.env.PORT)
 const application = express();
 
 setMiddlewares(application);
-
-application.listen(process.env.PORT, process.env.HOST, () => {
-    logger.info(`  Listening on http://${process.env.HOST}:${process.env.PORT}`);
+application.listen(process.env.PORT, () => {
+    logger.info(`  Listening on http://${location.host}:${process.env.PORT}`);
 });
